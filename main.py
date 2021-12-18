@@ -21,7 +21,6 @@ if __name__ == '__main__':
             # client.publish("topic/test", "Hello world!")
             client.publish("light", status, qos=1)
             client.publish("light", amount, qos=1)
-            client.disconnect()
             time.sleep(wait_interval)
         except Exception as e:
             client.connect(BROKER_URL, BROKER_PORT)
